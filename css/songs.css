@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+p, i{
+    color: white;
+    margin: 0;
+}
+
+body {
+    background-image: url("../img/lost-ark-mokoko--14112.jpg");
+    background-size: cover;          /* Ensures image covers the full area */
+    background-position: center;     /* Keeps the image centered */
+    background-repeat: no-repeat;    /* Prevents image tiling */
+    min-height: 100vh;               /* Makes sure it covers full viewport height */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px 20px;
+
+    
+}
+
+.spotify-container{
+    width: 300px;
+    background-color: grey;
+    border-radius: 10px;
+    height: auto;
+    position: absolute;
+    animation: float 3s ease-in-out infinite;
+    cursor: grab;
+
+   
+
+}
+
+.upper img{
+    width: 40px;
+    border-radius: 100%;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.upper{
+    display: flex;
+}
+
+.separate #title{
+    font-weight:600;
+    margin-top: 5px;
+}
+.separate{
+    margin-left: 5px;
+}
+.play{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+
+.spotify-container:nth-child(1) {
+    top: 50px;
+    left: 50rem;
+}
+
+.spotify-container:nth-child(2) {
+    top: 200px;
+    left: 150px;
+}
+
+.spotify-container:nth-child(3) {
+    top: 350px;
+    left: 250px;
+}
+
+.spotify-container:nth-child(4) {
+    top: 500px;
+    left: 60rem;
+}
+
+.fa-play{
+    cursor: pointer;
+    
+}
+
+.fa-pause{
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        justify-content: center;
+        padding: 20px 10px;
+    }
+    .spotify-container {
+        max-width: 90%;
+    }
+
+    .spotify-container:nth-child(1) {
+
+        left: 10px;
+    }
+    .spotify-container:nth-child(4) {
+        left: 20px;
+    }
+
+    i{
+        font-size: 20px;
+    }
+}
